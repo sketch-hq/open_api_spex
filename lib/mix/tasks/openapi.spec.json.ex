@@ -15,7 +15,6 @@ defmodule Mix.Tasks.Openapi.Spec.Json do
 
   @impl true
   def run(argv) do
-    Mix.Task.run("app.start")
     opts = parse_options(argv)
     content = generate_spec(opts)
     write_spec(content, opts.filename)
